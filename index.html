@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ES Modules 会員管理サンプル</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      padding: 16px;
+    }
+    table {
+      border-collapse: collapse;
+      margin-top: 12px;
+      width: 100%;
+      max-width: 480px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 4px 8px;
+      text-align: left;
+    }
+    form {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+    label {
+      margin-right: 8px;
+    }
+    input[type="text"], input[type="number"] {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>会員管理</h1>
+
+  <form id="member-form">
+    <label>
+      名前:
+      <input type="text" id="name-input" required />
+    </label>
+    <label>
+      年齢:
+      <input type="number" id="age-input" required min="0" />
+    </label>
+    <button type="submit">追加</button>
+  </form>
+
+  <div id="message"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>年齢</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody id="member-table-body">
+      <!-- JS で埋め込み -->
+    </tbody>
+  </table>
+
+  <!-- ES Modules のエントリポイント -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
